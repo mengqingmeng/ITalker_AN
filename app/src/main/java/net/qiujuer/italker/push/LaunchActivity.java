@@ -12,6 +12,7 @@ import android.view.View;
 
 import net.qiujuer.genius.res.Resource;
 import net.qiujuer.genius.ui.compat.UiCompat;
+import net.qiujuer.italker.common.Common;
 import net.qiujuer.italker.common.app.Activity;
 import net.qiujuer.italker.factory.persistence.Account;
 import net.qiujuer.italker.push.activities.AccountActivity;

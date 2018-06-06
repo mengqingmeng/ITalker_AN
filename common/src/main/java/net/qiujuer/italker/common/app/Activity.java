@@ -27,10 +27,11 @@ public abstract class Activity extends AppCompatActivity {
         initWidows();
 
         if (initArgs(getIntent().getExtras())) {
-            // 得到界面Id并设置到Activity界面中
+            // 得到界面Id并设置到Activity界面中，子类必须重写
             int layId = getContentLayoutId();
             setContentView(layId);
             initBefore();
+            //绑定Activity 必须在setContentView之后
             initWidget();
             initData();
         } else {
