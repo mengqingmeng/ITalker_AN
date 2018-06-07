@@ -19,7 +19,7 @@ import butterknife.Unbinder;
 
 public abstract class Fragment extends android.support.v4.app.Fragment {
     protected View mRoot;
-    protected Unbinder mRootUnBinder;
+    protected Unbinder mRootUnBinder;   //用于解绑Fragment
     protected PlaceHolderView mPlaceHolderView;
     // 标示是否第一次初始化数据
     protected boolean mIsFirstInitData = true;
@@ -28,7 +28,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        // 初始化参数
+        // 初始化参数;getArguments()获取从activity中传入的值
         initArgs(getArguments());
 
     }
@@ -38,7 +38,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (mRoot == null) {
             int layId = getContentLayoutId();
-            // 初始化当前的跟布局，但是不在创建时就添加到container里边
+            // 初始化当前的跟布局，但是不在创建时就添加到container里边;inflate()方法用于加载布局文件
             View root = inflater.inflate(layId, container, false);
             initWidget(root);
             mRoot = root;
