@@ -13,9 +13,9 @@ android {
 
         //个推相关参数
         manifestPlaceholders = [
-                GETUI_APP_ID    : "Rr51sROK4B8FXbq0TUjAF5",
-                GETUI_APP_KEY   : "eurxTdqHECAKgc7s4xtUe9",
-                GETUI_APP_SECRET: "wvAHiSQwuJ79Fp1tBy8Td8",
+                GETUI_APP_ID    : "TikSX6tIRl9FWHPgB7c7l8",
+                GETUI_APP_KEY   : "409xFGXGhs8sYYbih6Od95",
+                GETUI_APP_SECRET: "LF5qMC8awW7OFhfRzUfC8",
                 PACKAGE_NAME    : applicationId
         ]
 
